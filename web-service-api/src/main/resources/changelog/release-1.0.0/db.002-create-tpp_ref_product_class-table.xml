@@ -1,0 +1,37 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-002" author="igudkov">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="tpp_ref_product_class"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="tpp_ref_product_class">
+            <column name="internal_id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="gbl_code" type="VARCHAR(50)"/>
+            <column name="gbl_name" type="VARCHAR(255)"/>
+            <column name="product_row_code" type="VARCHAR(50)"/>
+            <column name="product_row_name" type="VARCHAR(255)"/>
+            <column name="subclass_code" type="VARCHAR(50)"/>
+            <column name="subclass_name" type="VARCHAR(50)"/>
+        </createTable>
+
+<!--        <sqlFile path="sql/init_tpp_ref_product_class.sql"-->
+<!--                 splitStatements="true"-->
+<!--                 stripComments="false"-->
+<!--                 relativeToChangelogFile="true"-->
+<!--                 encoding="utf-8"-->
+<!--                 dbms="postgresql" />-->
+
+        <rollback>
+            <dropTable tableName="tpp_ref_product_class"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

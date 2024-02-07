@@ -1,0 +1,427 @@
+openapi: 3.0.1
+info:
+  title: Prod Processor
+  description: Prod Processor
+  contact:
+    name: Гудков Игорь Николаевич
+    url: https://inno.tech/ru/
+    email: IGudkov@inno.tech
+  license:
+    name: |-
+      Innotech Group. Do not reproduce without permission in writing.
+      Copyright (c) 2024 Innotech Group. All rights reserved.
+  version: 0.0.0.1-J17
+servers:
+  - url: http://localhost:8081
+    description: LOCAL
+  - url: http://localhost:8081
+    description: DSO
+  - url: http://localhost:8081
+    description: К3
+  - url: http://localhost:8081
+    description: К4
+  - url: http://localhost:8081
+    description: HOTFIX
+  - url: http://localhost:8081
+    description: PROD
+tags:
+  - name: ПРОДУКТОВЫЙ РЕГИСТР (ПР)
+    description: Взаимодействие с продуктовым регистром
+  - name: ЭКЗЕМПЛЯР ПРОДУКТА (ЭП)
+    description: Взаимодействие с продуктом
+paths:
+  /corporate-settlement-instance/create:
+    post:
+      tags:
+        - ЭКЗЕМПЛЯР ПРОДУКТА (ЭП)
+      summary: Создание нового объекта ЭКЗЕМПЛЯРА ПРОДУКТА (ЭП)
+      description: Создание нового объекта ЭКЗЕМПЛЯРА ПРОДУКТА (ЭП)
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InstanceCreateRequest'
+        required: true
+      responses:
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InstanceCreateResponse'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Server Error
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /corporate-settlement-account/create:
+    post:
+      tags:
+        - ПРОДУКТОВЫЙ РЕГИСТР (ПР)
+      summary: Создание нового объекта ПРОДУКТОВЫЙ РЕГИСТР (ПР)
+      description: Создание нового объекта ПРОДУКТОВЫЙ РЕГИСТР (ПР)
+      operationId: create_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountCreateRequest'
+        required: true
+      responses:
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountCreateResponse'
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: Server Error
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    InstanceCreateRequest:
+      type: object
+      properties:
+        instanceId:
+          type: string
+          description: Идентификатор экземпляра продукта
+          nullable: true
+          example: "1"
+        productType:
+          type: string
+          description: Тип Экземпляра Продукта
+          example: ДОГОВОР
+        productCode:
+          type: string
+          description: Код продукта в каталоге продуктов
+          example: 03.012.002
+        registerType:
+          type: string
+          description: Тип регистра
+          example: 03.012.002_47533_ComSoLd
+        mdmCode:
+          type: string
+          description: Код Клиента (mdm)
+          example: "15"
+        contractNumber:
+          type: string
+          description: Номер договора
+          example: 2024-01-10-000001
+        contractDate:
+          type: string
+          description: Дата заключения договора обслуживания
+          example: 2024-01-10
+        priority:
+          type: integer
+          description: Приоритет
+          format: int32
+          example: 2
+        interestRatePenalty:
+          type: number
+          description: Штрафная процентная ставка
+          nullable: true
+          example: 12.25
+        minimalBalance:
+          type: number
+          description: Неснижаемый остаток
+          nullable: true
+          example: 0
+        thresholdAmount:
+          type: number
+          description: Пороговая сумма
+          nullable: true
+          example: 0
+        accountingDetails:
+          type: string
+          description: Реквизиты выплаты
+          nullable: true
+          example: qwerty
+        rateType:
+          type: string
+          description: Выбор ставки в зависимости от суммы
+          nullable: true
+          example: "0"
+        taxPercentageRate:
+          type: number
+          description: Ставка налогообложения
+          nullable: true
+          example: 13
+        technicalOverdraftLimitAmount:
+          type: number
+          description: Сумма лимита технического овердрафта
+          nullable: true
+          example: 1000
+        contractId:
+          type: integer
+          description: ID Договора
+          format: int32
+          example: 0
+        branchCode:
+          type: string
+          description: Код филиала
+          example: "0022"
+        isoCurrencyCode:
+          type: string
+          description: Код валюты
+          example: "800"
+        urgencyCode:
+          type: string
+          description: Код срочности договора
+          example: "00"
+        referenceCode:
+          type: string
+          description: Код точки продаж
+          nullable: true
+          example: "1234"
+        properties:
+          type: array
+          description: Масссив дополнительных признаков
+          nullable: true
+          items:
+            $ref: '#/components/schemas/InstanceCreateRequestPropertyItem'
+        arrangements:
+          type: array
+          description: Массив доп.соглашений
+          nullable: true
+          items:
+            $ref: '#/components/schemas/InstanceCreateRequestArrangementItem'
+    InstanceCreateRequestArrangementItem:
+      type: object
+      properties:
+        generalAgreementId:
+          type: string
+          description: ID доп. ген. соглашения
+          nullable: true
+          example: "123"
+        supplementaryAgreementId:
+          type: string
+          description: ID доп. соглашения
+          nullable: true
+          example: "456"
+        arrangementType:
+          type: string
+          description: Тип соглашения
+          nullable: true
+          example: НСО
+        schedulerJobId:
+          type: integer
+          description: Идентификатор периодичности учета
+          format: int32
+          nullable: true
+          example: 123456789
+        number:
+          type: string
+          description: Номер ДС
+          example: НСО-123
+        openingDate:
+          type: string
+          description: Дата начала сделки
+          example: 2024-01-11
+        closingDate:
+          type: string
+          description: Дата окончания сделки
+          nullable: true
+          example: 2025-01-10
+        cancelDate:
+          type: string
+          description: Дата отзыва сделки
+          nullable: true
+          example: 2027-02-03
+        validityDuration:
+          type: integer
+          description: Срок действия сделки
+          format: int32
+          nullable: true
+          example: 365
+        cancellationReason:
+          type: string
+          description: Причина расторжения
+          nullable: true
+        status:
+          type: string
+          description: Состояние/статус
+          nullable: true
+          example: открыт
+        interestCalculationDate:
+          type: string
+          description: Начисление начинается с (дата)
+          nullable: true
+          example: 2024-01-12
+        interestRate:
+          type: number
+          description: Процент начисления на остаток
+          nullable: true
+          example: 0
+        coefficient:
+          type: number
+          description: Коэффициент
+          nullable: true
+          example: 0
+        coefficientAction:
+          type: string
+          description: Действие коэффициента
+          nullable: true
+        minimumInterestRate:
+          type: number
+          description: Минимум по ставке
+          nullable: true
+          example: 0
+        minimumInterestRateCoefficient:
+          type: number
+          description: Коэффициент по минимальной ставке
+          nullable: true
+          example: 0
+        minimumInterestRateCoefficientAction:
+          type: string
+          description: Действие коэффициента по минимальной ставке
+          nullable: true
+        maximalInterestRate:
+          type: number
+          description: Максимум по ставке
+          nullable: true
+          example: 0
+        maximalInterestRateCoefficient:
+          type: number
+          description: Коэффициент по максимальной ставке
+          nullable: true
+          example: 0
+        maximalInterestRateCoefficientAction:
+          type: string
+          description: Действие коэффициента по максимальной ставке
+          nullable: true
+      description: Массив доп.соглашений
+      nullable: true
+    InstanceCreateRequestPropertyItem:
+      type: object
+      properties:
+        key:
+          type: string
+          description: Ключ
+        value:
+          type: string
+          description: Значение
+      description: Масссив дополнительных признаков
+      nullable: true
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Текст ошибки
+        stackTrace:
+          type: string
+          description: Стек-трейс ошибки
+          nullable: true
+    InstanceCreateResponse:
+      type: object
+      properties:
+        instanceId:
+          type: integer
+          description: Идентификатор экземпляра продукта
+          format: int64
+          example: 12345
+        registerId:
+          type: array
+          description: Массив идентификаторов продуктового регистра
+          items:
+            type: string
+            description: Массив идентификаторов продуктового регистра
+        supplementaryAgreementId:
+          type: array
+          description: Массив ID доп. соглашения
+          items:
+            type: string
+            description: Массив ID доп. соглашения
+    AccountCreateRequest:
+      type: object
+      properties:
+        instanceId:
+          type: string
+          description: Идентификатор экземпляра продукта
+          example: "1"
+        registryTypeCode:
+          type: string
+          description: Тип регистра
+          nullable: true
+          example: 03.012.002_47533_ComSoLd
+        accountType:
+          type: string
+          description: Тип счета
+          nullable: true
+          example: Клиентский
+        currencyCode:
+          type: string
+          description: Код валюты
+          nullable: true
+          example: "800"
+        branchCode:
+          type: string
+          description: Код филиала
+          nullable: true
+          example: "0022"
+        priorityCode:
+          type: string
+          description: Код срочности
+          nullable: true
+          example: "00"
+        mdmCode:
+          type: string
+          description: Id клиента
+          nullable: true
+          example: "15"
+        clientCode:
+          type: string
+          description: Код клиента
+          nullable: true
+          example: 15-12345
+        trainRegion:
+          type: string
+          description: Регион принадлежности железной дороги
+          nullable: true
+          example: ABC
+        counter:
+          type: string
+          description: Счетчик
+          nullable: true
+          example: "123"
+        salesCode:
+          type: string
+          description: Код точки продаж
+          nullable: true
+    AccountCreateResponse:
+      type: object
+      properties:
+        instanceId:
+          type: integer
+          description: Идентификатор продуктового регистра
+          format: int64
+          example: 1

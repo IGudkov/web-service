@@ -1,0 +1,57 @@
+{
+  "instanceId" : "",
+  "productType" : "ДОГОВОР",
+  "productCode" : "03.012.002",
+  "registerType" : "03.012.002_47533_ComSoLd",
+  "mdmCode" : "15",
+  "contractNumber" : "2024-01-10-000001",
+  "contractDate" : "2024-01-10",
+  "priority" : "2",
+  "interestRatePenalty" : 12.25,
+  "minimalBalance" : 0,
+  "thresholdAmount" : 0,
+  "accountingDetails" : "qwerty",
+  "rateType" : "0",
+  "taxPercentageRate" : "13",
+  "technicalOverdraftLimitAmount" : 1000,
+  "contractId" : 112233,
+  "branchCode" : "0022",
+  "isoCurrencyCode" : "800",
+  "urgencyCode" : "00",
+  "referenceCode" : 1234,
+  "properties" : [
+    {
+      "key" : "RailwayRegionOwn",
+      "value" : "ABC"
+    },
+    {
+      "key" : "counter",
+      "value" : 123
+    }
+  ],
+  "arrangements" : [
+    {
+      "generalAgreementId" : "123",
+      "supplementaryAgreementId" : "456",
+      "arrangementType" : "НСО",
+      "schedulerJobId" : 123456789,
+      "number" : "НСО-123",
+      "openingDate" : "2024-01-11",
+      "closingDate" : "2025-01-10",
+      "cancelDate" : "",
+      "validityDuration" : "365",
+      "cancellationReason" : "",
+      "status" : "открыт",
+      "interestCalculationDate" : "",
+      "interestRate" : 0,
+      "coefficient" : 0,
+      "coefficientAction" : "",
+      "minimumInterestRate" : 0,
+      "minimumInterestRateCoefficient" : 0,
+      "minimumInterestRateCoefficientAction" : "",
+      "maximalInterestRate" : 0,
+      "maximalInterestRateCoefficient" : 0,
+      "maximalInterestRateCoefficientAction" : ""
+    }
+  ]
+}

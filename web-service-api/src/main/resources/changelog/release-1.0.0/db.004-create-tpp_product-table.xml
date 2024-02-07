@@ -1,0 +1,42 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-006" author="igudkov">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="tpp_product"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="tpp_product">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tpp_product_id"/>
+            </column>
+
+            <column name="agreement_id" type="INTEGER"/>
+            <column name="product_code" type="VARCHAR(255)"/>
+
+            <column name="client_id" type="INTEGER"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="number" type="VARCHAR(255)"/>
+            <column name="priority" type="INTEGER"/>
+            <column name="date_of_conclusion" type="DATE"/>
+            <column name="start_date_time" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="end_date_time" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="days" type="INTEGER"/>
+            <column name="nso" type="numeric"/>
+            <column name="threshold_amount" type="numeric"/>
+            <column name="requlsite_type" type="VARCHAR(255)"/>
+            <column name="interest_rate_type" type="VARCHAR(255)"/>
+            <column name="tax_rate" type="numeric"/>
+            <column name="reason_close" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="tpp_product"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,57 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-005" author="igudkov">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="tpp_agreement"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="tpp_agreement">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tpp_agreement_id"/>
+            </column>
+            <column name="product_id" type="BIGINT"/>
+            <column name="general_agreement_id" type="VARCHAR(255)"/>
+            <column name="supplementary_agreement_id" type="VARCHAR(255)"/>
+            <column name="arrangement_type" type="VARCHAR(255)"/>
+            <column name="sheduler_job_id" type="INTEGER"/>
+            <column name="number" type="VARCHAR(255)"/>
+            <column name="opening_date" type="DATE"/>
+            <column name="closing_date" type="DATE"/>
+            <column name="cancel_date" type="DATE"/>
+            <column name="validity_duration" type="INTEGER"/>
+            <column name="cancellation_reason" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="interest_calculation_date" type="DATE"/>
+            <column name="interest_rate" type="numeric"/>
+            <column name="coefficient" type="numeric"/>
+            <column name="coefficient_action" type="VARCHAR(255)"/>
+            <column name="minimum_interest_rate" type="numeric"/>
+            <column name="minimum_interest_rate_coefficient" type="numeric"/>
+            <column name="minimum_interest_rate_coefficient_action" type="VARCHAR(255)"/>
+            <column name="maxima_interest_rate" type="numeric"/>
+            <column name="maxima_interest_rate_coefficient" type="numeric"/>
+            <column name="maxima_interest_rate_coefficient_action" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="tpp_agreement"
+                                 baseColumnNames="product_id"
+                                 constraintName="fk_tpp_agreement_product_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tpp_product"
+                                 validate="true"/>
+
+        <createIndex tableName="tpp_agreement"
+                     indexName="idx_tpp_agreement_product_id">
+            <column name="product_id"/>
+        </createIndex>
+
+        <rollback>
+            <dropTable tableName="tpp_agreement"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

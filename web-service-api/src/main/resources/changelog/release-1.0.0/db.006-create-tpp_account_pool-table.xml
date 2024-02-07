@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-004" author="igudkov">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="tpp_account_pool"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="tpp_account_pool">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tpp_account_pool_id"/>
+            </column>
+            <column name="branch_code" type="VARCHAR(255)"/>
+            <column name="currency_code" type="VARCHAR(255)"/>
+            <column name="mdm_code" type="VARCHAR(255)"/>
+            <column name="priority_code" type="VARCHAR(255)"/>
+            <column name="registry_type_code" type="VARCHAR(255)"/>
+            <column name="account" type="VARCHAR(255)"/>
+        </createTable>
+
+<!--        <sqlFile path="sql/init_account_pool.sql"-->
+<!--                 splitStatements="true"-->
+<!--                 stripComments="false"-->
+<!--                 relativeToChangelogFile="true"-->
+<!--                 encoding="utf-8"-->
+<!--                 dbms="postgresql" />-->
+
+        <rollback>
+            <dropTable tableName="tpp_account_pool"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

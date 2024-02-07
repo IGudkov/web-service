@@ -1,0 +1,42 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-007" author="igudkov">
+
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="tpp_product_register"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="tpp_product_register">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_tpp_product_register_id"/>
+            </column>
+
+            <column name="product_id" type="BIGINT"/>
+            <column name="type" type="INTEGER"/>
+
+            <column name="currency_code" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="account_number" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="tpp_product_register"
+                                 baseColumnNames="product_id"
+                                 constraintName="fk_tpp_product_register_product_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tpp_product"
+                                 validate="true"/>
+
+        <createIndex tableName="tpp_product_register"
+                     indexName="idx_tpp_product_register_product_id">
+            <column name="product_id"/>
+        </createIndex>
+
+        <rollback>
+            <dropTable tableName="tpp_product_register"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

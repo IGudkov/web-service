@@ -1,0 +1,42 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        changelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="1.0.0-008-001" author="igudkov">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="tpp_account_pool"/>
+        </preConditions>
+        <sqlFile path="sql/init_account_pool.sql"
+                 dbms="postgresql"
+                 relativeToChangelogFile="true"
+        />
+    </changeSet>
+    <changeSet id="1.0.0-008-002" author="igudkov">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="tpp_ref_account_type"/>
+        </preConditions>
+        <sqlFile path="sql/init_tpp_ref_account_type.sql"
+                 dbms="postgresql"
+                 relativeToChangelogFile="true"
+        />
+    </changeSet>
+    <changeSet id="1.0.0-008-003" author="igudkov">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="tpp_ref_product_class"/>
+        </preConditions>
+        <sqlFile path="sql/init_tpp_ref_product_class.sql"
+                 dbms="postgresql"
+                 relativeToChangelogFile="true"
+        />
+    </changeSet>
+    <changeSet id="1.0.0-008-004" author="igudkov">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="tpp_ref_product_register_type"/>
+        </preConditions>
+        <sqlFile path="sql/init_tpp_ref_product_register_type.sql"
+                 dbms="postgresql"
+                 relativeToChangelogFile="true"
+        />
+    </changeSet>
+
+</databaseChangeLog>

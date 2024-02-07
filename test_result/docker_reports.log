@@ -1,0 +1,1192 @@
+2024-02-07 21:19:22 
+2024-02-07 21:19:22   .   ____          _            __ _ _
+2024-02-07 21:19:22  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2024-02-07 21:19:22 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2024-02-07 21:19:22  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2024-02-07 21:19:22   '  |____| .__|_| |_|_| |_\__, | / / / /
+2024-02-07 21:19:22  =========|_|==============|___/=/_/_/_/
+2024-02-07 21:19:22  :: Spring Boot ::                (v2.6.4)
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 2024-02-07 18:19:22.140  INFO 1 --- [           main] r.courses.innotech.api.StartApplication  : Starting StartApplication using Java 17-ea on 0542f9a893f9 with PID 1 (/app/web-service-api.jar started by root in /)
+2024-02-07 21:19:22 2024-02-07 18:19:22.143  INFO 1 --- [           main] r.courses.innotech.api.StartApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-07 21:19:23 2024-02-07 18:19:23.044  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-07 21:19:23 2024-02-07 18:19:23.129  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2024-02-07 21:19:23 2024-02-07 18:19:23.700  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-07 21:19:23 2024-02-07 18:19:23.713  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-07 21:19:23 2024-02-07 18:19:23.713  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-02-07 21:19:23 2024-02-07 18:19:23.779  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-07 21:19:23 2024-02-07 18:19:23.779  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1574 ms
+2024-02-07 21:19:24 2024-02-07 18:19:24.069  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-07 21:19:24 2024-02-07 18:19:24.261  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-07 21:19:24 2024-02-07 18:19:24.538  INFO 1 --- [           main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-02-07 21:19:24 2024-02-07 18:19:24.981  INFO 1 --- [           main] liquibase.changelog                      : Creating database history table with name: public.databasechangelog
+2024-02-07 21:19:24 2024-02-07 18:19:24.998  INFO 1 --- [           main] liquibase.changelog                      : Reading from public.databasechangelog
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.001-create-tpp_ref_account_type-table.xml::1.0.0-001::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.243  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_ref_account_type created
+2024-02-07 21:19:25 2024-02-07 18:19:25.245  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.001-create-tpp_ref_account_type-table.xml::1.0.0-001::igudkov ran successfully in 29ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.002-create-tpp_ref_product_class-table.xml::1.0.0-002::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.266  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_ref_product_class created
+2024-02-07 21:19:25 2024-02-07 18:19:25.268  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.002-create-tpp_ref_product_class-table.xml::1.0.0-002::igudkov ran successfully in 18ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.003-create-tpp_ref_product_register_type-table.xml::1.0.0-003::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.286  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_ref_product_register_type created
+2024-02-07 21:19:25 2024-02-07 18:19:25.288  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.003-create-tpp_ref_product_register_type-table.xml::1.0.0-003::igudkov ran successfully in 17ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.004-create-tpp_product-table.xml::1.0.0-006::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.308  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_product created
+2024-02-07 21:19:25 2024-02-07 18:19:25.310  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.004-create-tpp_product-table.xml::1.0.0-006::igudkov ran successfully in 19ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.006-create-tpp_account_pool-table.xml::1.0.0-004::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.332  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_account_pool created
+2024-02-07 21:19:25 2024-02-07 18:19:25.337  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.006-create-tpp_account_pool-table.xml::1.0.0-004::igudkov ran successfully in 23ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.005-create-tpp_agreement-table.xml::1.0.0-005::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.388  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_agreement created
+2024-02-07 21:19:25 2024-02-07 18:19:25.394  INFO 1 --- [           main] liquibase.changelog                      : Foreign key constraint added to tpp_agreement (product_id)
+2024-02-07 21:19:25 2024-02-07 18:19:25.398  INFO 1 --- [           main] liquibase.changelog                      : Index idx_tpp_agreement_product_id created
+2024-02-07 21:19:25 2024-02-07 18:19:25.401  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.005-create-tpp_agreement-table.xml::1.0.0-005::igudkov ran successfully in 49ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.007-create-tpp_product_register-table.xml::1.0.0-007::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.420  INFO 1 --- [           main] liquibase.changelog                      : Table tpp_product_register created
+2024-02-07 21:19:25 2024-02-07 18:19:25.422  INFO 1 --- [           main] liquibase.changelog                      : Foreign key constraint added to tpp_product_register (product_id)
+2024-02-07 21:19:25 2024-02-07 18:19:25.427  INFO 1 --- [           main] liquibase.changelog                      : Index idx_tpp_product_register_product_id created
+2024-02-07 21:19:25 2024-02-07 18:19:25.429  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.007-create-tpp_product_register-table.xml::1.0.0-007::igudkov ran successfully in 24ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-001::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.449  INFO 1 --- [           main] liquibase.changelog                      : SQL in file sql/init_account_pool.sql executed
+2024-02-07 21:19:25 2024-02-07 18:19:25.451  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-001::igudkov ran successfully in 18ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-002::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.459  INFO 1 --- [           main] liquibase.changelog                      : SQL in file sql/init_tpp_ref_account_type.sql executed
+2024-02-07 21:19:25 2024-02-07 18:19:25.461  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-002::igudkov ran successfully in 7ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-003::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.471  INFO 1 --- [           main] liquibase.changelog                      : SQL in file sql/init_tpp_ref_product_class.sql executed
+2024-02-07 21:19:25 2024-02-07 18:19:25.472  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-003::igudkov ran successfully in 8ms
+2024-02-07 21:19:25 Running Changeset: changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-004::igudkov
+2024-02-07 21:19:25 2024-02-07 18:19:25.482  INFO 1 --- [           main] liquibase.changelog                      : SQL in file sql/init_tpp_ref_product_register_type.sql executed
+2024-02-07 21:19:25 2024-02-07 18:19:25.483  INFO 1 --- [           main] liquibase.changelog                      : ChangeSet changelog/release-1.0.0/db.008-insert-table.xml::1.0.0-008-004::igudkov ran successfully in 7ms
+2024-02-07 21:19:25 2024-02-07 18:19:25.489  INFO 1 --- [           main] liquibase.lockservice                    : Successfully released change log lock
+2024-02-07 21:19:25 2024-02-07 18:19:25.547  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-07 21:19:25 2024-02-07 18:19:25.606  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2024-02-07 21:19:25 2024-02-07 18:19:25.772  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-07 21:19:25 2024-02-07 18:19:25.885  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-02-07 21:19:26 2024-02-07 18:19:26.532  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-07 21:19:26 2024-02-07 18:19:26.541  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-07 21:19:26 2024-02-07 18:19:26.791  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.792  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.847  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.912  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.915  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.953  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.954  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.965  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.974  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.988  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.988  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.990  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.991  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:26 2024-02-07 18:19:26.999  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:26     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:26     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:26     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:26     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:26 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.000  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.015  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.016  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.017  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.018  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.024  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.029  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.050  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.051  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.092  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.102  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.117  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.117  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.119  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.119  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.121  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.121  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:27     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:27     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:27     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:27 }
+2024-02-07 21:19:27 2024-02-07 18:19:27.254  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-07 21:19:28 2024-02-07 18:19:28.157  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:28     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:28 }
+2024-02-07 21:19:28 2024-02-07 18:19:28.161  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:28     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:28 }
+2024-02-07 21:19:28 2024-02-07 18:19:28.175  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:28     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:28 }
+2024-02-07 21:19:28 2024-02-07 18:19:28.180  INFO 1 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:19:28     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:19:28     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:19:28     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:19:28     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:19:28 }
+2024-02-07 21:19:28 2024-02-07 18:19:28.240  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-07 21:19:28 2024-02-07 18:19:28.251  INFO 1 --- [           main] r.courses.innotech.api.StartApplication  : Started StartApplication in 6.603 seconds (JVM running for 7.066)
+2024-02-07 21:20:17 2024-02-07 18:20:17.027  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-07 21:20:17 2024-02-07 18:20:17.028  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-07 21:20:17 2024-02-07 18:20:17.029  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-07 21:20:17 2024-02-07 18:20:17.097  INFO 1 --- [nio-8080-exec-1] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:20:17     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:20:17 }
+2024-02-07 21:20:17 2024-02-07 18:20:17.124  INFO 1 --- [nio-8080-exec-2] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:20:17     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:20:17 }
+2024-02-07 21:20:17 2024-02-07 18:20:17.267  INFO 1 --- [nio-8080-exec-3] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:20:17     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:20:17 }
+2024-02-07 21:20:17 2024-02-07 18:20:17.535  INFO 1 --- [nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 240 ms
+2024-02-07 21:20:17 2024-02-07 18:20:17.545  INFO 1 --- [nio-8080-exec-4] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:20:17     0 nanoseconds spent acquiring 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:20:17     0 nanoseconds spent preparing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC statements;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:20:17     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:20:17     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:20:17 }
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         product0_.id as id1_2_,
+2024-02-07 21:22:57         product0_.agreement_id as agreemen2_2_,
+2024-02-07 21:22:57         product0_.client_id as client_i3_2_,
+2024-02-07 21:22:57         product0_.date_of_conclusion as date_of_4_2_,
+2024-02-07 21:22:57         product0_.days as days5_2_,
+2024-02-07 21:22:57         product0_.end_date_time as end_date6_2_,
+2024-02-07 21:22:57         product0_.interest_rate_type as interest7_2_,
+2024-02-07 21:22:57         product0_.nso as nso8_2_,
+2024-02-07 21:22:57         product0_.number as number9_2_,
+2024-02-07 21:22:57         product0_.priority as priorit10_2_,
+2024-02-07 21:22:57         product0_.product_code as product11_2_,
+2024-02-07 21:22:57         product0_.reason_close as reason_12_2_,
+2024-02-07 21:22:57         product0_.requlsite_type as requlsi13_2_,
+2024-02-07 21:22:57         product0_.start_date_time as start_d14_2_,
+2024-02-07 21:22:57         product0_.state as state15_2_,
+2024-02-07 21:22:57         product0_.tax_rate as tax_rat16_2_,
+2024-02-07 21:22:57         product0_.threshold_amount as thresho17_2_,
+2024-02-07 21:22:57         product0_.type as type18_2_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_product product0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         product0_.number=?
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         agreement0_.id as col_0_0_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_agreement agreement0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         agreement0_.number=? limit ?
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     insert 
+2024-02-07 21:22:57     into
+2024-02-07 21:22:57         tpp_product
+2024-02-07 21:22:57         (agreement_id, client_id, date_of_conclusion, days, end_date_time, interest_rate_type, nso, number, priority, product_code, reason_close, requlsite_type, start_date_time, state, tax_rate, threshold_amount, type) 
+2024-02-07 21:22:57     values
+2024-02-07 21:22:57         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         tpprefprod0_.internal_id as internal1_6_,
+2024-02-07 21:22:57         tpprefprod0_.account_type_code as account_2_6_,
+2024-02-07 21:22:57         tpprefprod0_.product_class_code as product_3_6_,
+2024-02-07 21:22:57         tpprefprod0_.register_type_name as register4_6_,
+2024-02-07 21:22:57         tpprefprod0_.value as value5_6_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_ref_product_register_type tpprefprod0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         tpprefprod0_.product_class_code=? 
+2024-02-07 21:22:57         and tpprefprod0_.account_type_code=?
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         accountpoo0_.id as id1_0_,
+2024-02-07 21:22:57         accountpoo0_.account as account2_0_,
+2024-02-07 21:22:57         accountpoo0_.branch_code as branch_c3_0_,
+2024-02-07 21:22:57         accountpoo0_.currency_code as currency4_0_,
+2024-02-07 21:22:57         accountpoo0_.mdm_code as mdm_code5_0_,
+2024-02-07 21:22:57         accountpoo0_.priority_code as priority6_0_,
+2024-02-07 21:22:57         accountpoo0_.registry_type_code as registry7_0_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_account_pool accountpoo0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         accountpoo0_.branch_code=? 
+2024-02-07 21:22:57         and accountpoo0_.currency_code=? 
+2024-02-07 21:22:57         and accountpoo0_.mdm_code=? 
+2024-02-07 21:22:57         and accountpoo0_.priority_code=? 
+2024-02-07 21:22:57         and accountpoo0_.registry_type_code=? limit ?
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     insert 
+2024-02-07 21:22:57     into
+2024-02-07 21:22:57         tpp_product_register
+2024-02-07 21:22:57         (account_number, currency_code, product_id, state, type) 
+2024-02-07 21:22:57     values
+2024-02-07 21:22:57         (?, ?, ?, ?, ?)
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         productreg0_.id as id1_3_,
+2024-02-07 21:22:57         productreg0_.account_number as account_2_3_,
+2024-02-07 21:22:57         productreg0_.currency_code as currency3_3_,
+2024-02-07 21:22:57         productreg0_.product_id as product_5_3_,
+2024-02-07 21:22:57         productreg0_.state as state4_3_,
+2024-02-07 21:22:57         productreg0_.type as type6_3_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_product_register productreg0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         productreg0_.product_id=?
+2024-02-07 21:22:57 Hibernate: 
+2024-02-07 21:22:57     select
+2024-02-07 21:22:57         agreement0_.id as id1_1_,
+2024-02-07 21:22:57         agreement0_.arrangement_type as arrangem2_1_,
+2024-02-07 21:22:57         agreement0_.cancel_date as cancel_d3_1_,
+2024-02-07 21:22:57         agreement0_.cancellation_reason as cancella4_1_,
+2024-02-07 21:22:57         agreement0_.closing_date as closing_5_1_,
+2024-02-07 21:22:57         agreement0_.coefficient as coeffici6_1_,
+2024-02-07 21:22:57         agreement0_.coefficient_action as coeffici7_1_,
+2024-02-07 21:22:57         agreement0_.general_agreement_id as general_8_1_,
+2024-02-07 21:22:57         agreement0_.interest_calculation_date as interest9_1_,
+2024-02-07 21:22:57         agreement0_.interest_rate as interes10_1_,
+2024-02-07 21:22:57         agreement0_.maxima_interest_rate as maxima_11_1_,
+2024-02-07 21:22:57         agreement0_.maxima_interest_rate_coefficient as maxima_12_1_,
+2024-02-07 21:22:57         agreement0_.maxima_interest_rate_coefficient_action as maxima_13_1_,
+2024-02-07 21:22:57         agreement0_.minimum_interest_rate as minimum14_1_,
+2024-02-07 21:22:57         agreement0_.minimum_interest_rate_coefficient as minimum15_1_,
+2024-02-07 21:22:57         agreement0_.minimum_interest_rate_coefficient_action as minimum16_1_,
+2024-02-07 21:22:57         agreement0_.number as number17_1_,
+2024-02-07 21:22:57         agreement0_.opening_date as opening18_1_,
+2024-02-07 21:22:57         agreement0_.product_id as product23_1_,
+2024-02-07 21:22:57         agreement0_.sheduler_job_id as shedule19_1_,
+2024-02-07 21:22:57         agreement0_.status as status20_1_,
+2024-02-07 21:22:57         agreement0_.supplementary_agreement_id as supplem21_1_,
+2024-02-07 21:22:57         agreement0_.validity_duration as validit22_1_ 
+2024-02-07 21:22:57     from
+2024-02-07 21:22:57         tpp_agreement agreement0_ 
+2024-02-07 21:22:57     where
+2024-02-07 21:22:57         agreement0_.product_id=?
+2024-02-07 21:22:57 2024-02-07 18:22:57.994  INFO 1 --- [nio-8080-exec-7] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:22:57     446401 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:22:57     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:22:57     3035307 nanoseconds spent preparing 8 JDBC statements;
+2024-02-07 21:22:57     7273313 nanoseconds spent executing 8 JDBC statements;
+2024-02-07 21:22:57     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:22:57     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:22:57     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:22:57     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:22:57     1335302 nanoseconds spent executing 1 flushes (flushing a total of 4 entities and 0 collections);
+2024-02-07 21:22:57     4220606 nanoseconds spent executing 6 partial-flushes (flushing a total of 11 entities and 11 collections)
+2024-02-07 21:22:57 }
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         product0_.id as id1_2_0_,
+2024-02-07 21:51:44         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 21:51:44         product0_.client_id as client_i3_2_0_,
+2024-02-07 21:51:44         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 21:51:44         product0_.days as days5_2_0_,
+2024-02-07 21:51:44         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 21:51:44         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 21:51:44         product0_.nso as nso8_2_0_,
+2024-02-07 21:51:44         product0_.number as number9_2_0_,
+2024-02-07 21:51:44         product0_.priority as priorit10_2_0_,
+2024-02-07 21:51:44         product0_.product_code as product11_2_0_,
+2024-02-07 21:51:44         product0_.reason_close as reason_12_2_0_,
+2024-02-07 21:51:44         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 21:51:44         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 21:51:44         product0_.state as state15_2_0_,
+2024-02-07 21:51:44         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 21:51:44         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 21:51:44         product0_.type as type18_2_0_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_product product0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         product0_.id=?
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         agreement0_.id as id1_1_,
+2024-02-07 21:51:44         agreement0_.arrangement_type as arrangem2_1_,
+2024-02-07 21:51:44         agreement0_.cancel_date as cancel_d3_1_,
+2024-02-07 21:51:44         agreement0_.cancellation_reason as cancella4_1_,
+2024-02-07 21:51:44         agreement0_.closing_date as closing_5_1_,
+2024-02-07 21:51:44         agreement0_.coefficient as coeffici6_1_,
+2024-02-07 21:51:44         agreement0_.coefficient_action as coeffici7_1_,
+2024-02-07 21:51:44         agreement0_.general_agreement_id as general_8_1_,
+2024-02-07 21:51:44         agreement0_.interest_calculation_date as interest9_1_,
+2024-02-07 21:51:44         agreement0_.interest_rate as interes10_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate as maxima_11_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate_coefficient as maxima_12_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate_coefficient_action as maxima_13_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate as minimum14_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate_coefficient as minimum15_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate_coefficient_action as minimum16_1_,
+2024-02-07 21:51:44         agreement0_.number as number17_1_,
+2024-02-07 21:51:44         agreement0_.opening_date as opening18_1_,
+2024-02-07 21:51:44         agreement0_.product_id as product23_1_,
+2024-02-07 21:51:44         agreement0_.sheduler_job_id as shedule19_1_,
+2024-02-07 21:51:44         agreement0_.status as status20_1_,
+2024-02-07 21:51:44         agreement0_.supplementary_agreement_id as supplem21_1_,
+2024-02-07 21:51:44         agreement0_.validity_duration as validit22_1_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_agreement agreement0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         agreement0_.product_id=? 
+2024-02-07 21:51:44         and agreement0_.number=?
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     insert 
+2024-02-07 21:51:44     into
+2024-02-07 21:51:44         tpp_agreement
+2024-02-07 21:51:44         (arrangement_type, cancel_date, cancellation_reason, closing_date, coefficient, coefficient_action, general_agreement_id, interest_calculation_date, interest_rate, maxima_interest_rate, maxima_interest_rate_coefficient, maxima_interest_rate_coefficient_action, minimum_interest_rate, minimum_interest_rate_coefficient, minimum_interest_rate_coefficient_action, number, opening_date, product_id, sheduler_job_id, status, supplementary_agreement_id, validity_duration) 
+2024-02-07 21:51:44     values
+2024-02-07 21:51:44         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         tpprefprod0_.internal_id as internal1_6_,
+2024-02-07 21:51:44         tpprefprod0_.account_type_code as account_2_6_,
+2024-02-07 21:51:44         tpprefprod0_.product_class_code as product_3_6_,
+2024-02-07 21:51:44         tpprefprod0_.register_type_name as register4_6_,
+2024-02-07 21:51:44         tpprefprod0_.value as value5_6_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_ref_product_register_type tpprefprod0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         tpprefprod0_.product_class_code=? 
+2024-02-07 21:51:44         and tpprefprod0_.account_type_code=?
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         accountpoo0_.id as id1_0_,
+2024-02-07 21:51:44         accountpoo0_.account as account2_0_,
+2024-02-07 21:51:44         accountpoo0_.branch_code as branch_c3_0_,
+2024-02-07 21:51:44         accountpoo0_.currency_code as currency4_0_,
+2024-02-07 21:51:44         accountpoo0_.mdm_code as mdm_code5_0_,
+2024-02-07 21:51:44         accountpoo0_.priority_code as priority6_0_,
+2024-02-07 21:51:44         accountpoo0_.registry_type_code as registry7_0_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_account_pool accountpoo0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         accountpoo0_.branch_code=? 
+2024-02-07 21:51:44         and accountpoo0_.currency_code=? 
+2024-02-07 21:51:44         and accountpoo0_.mdm_code=? 
+2024-02-07 21:51:44         and accountpoo0_.priority_code=? 
+2024-02-07 21:51:44         and accountpoo0_.registry_type_code=? limit ?
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     insert 
+2024-02-07 21:51:44     into
+2024-02-07 21:51:44         tpp_product_register
+2024-02-07 21:51:44         (account_number, currency_code, product_id, state, type) 
+2024-02-07 21:51:44     values
+2024-02-07 21:51:44         (?, ?, ?, ?, ?)
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         productreg0_.id as id1_3_,
+2024-02-07 21:51:44         productreg0_.account_number as account_2_3_,
+2024-02-07 21:51:44         productreg0_.currency_code as currency3_3_,
+2024-02-07 21:51:44         productreg0_.product_id as product_5_3_,
+2024-02-07 21:51:44         productreg0_.state as state4_3_,
+2024-02-07 21:51:44         productreg0_.type as type6_3_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_product_register productreg0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         productreg0_.product_id=?
+2024-02-07 21:51:44 Hibernate: 
+2024-02-07 21:51:44     select
+2024-02-07 21:51:44         agreement0_.id as id1_1_,
+2024-02-07 21:51:44         agreement0_.arrangement_type as arrangem2_1_,
+2024-02-07 21:51:44         agreement0_.cancel_date as cancel_d3_1_,
+2024-02-07 21:51:44         agreement0_.cancellation_reason as cancella4_1_,
+2024-02-07 21:51:44         agreement0_.closing_date as closing_5_1_,
+2024-02-07 21:51:44         agreement0_.coefficient as coeffici6_1_,
+2024-02-07 21:51:44         agreement0_.coefficient_action as coeffici7_1_,
+2024-02-07 21:51:44         agreement0_.general_agreement_id as general_8_1_,
+2024-02-07 21:51:44         agreement0_.interest_calculation_date as interest9_1_,
+2024-02-07 21:51:44         agreement0_.interest_rate as interes10_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate as maxima_11_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate_coefficient as maxima_12_1_,
+2024-02-07 21:51:44         agreement0_.maxima_interest_rate_coefficient_action as maxima_13_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate as minimum14_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate_coefficient as minimum15_1_,
+2024-02-07 21:51:44         agreement0_.minimum_interest_rate_coefficient_action as minimum16_1_,
+2024-02-07 21:51:44         agreement0_.number as number17_1_,
+2024-02-07 21:51:44         agreement0_.opening_date as opening18_1_,
+2024-02-07 21:51:44         agreement0_.product_id as product23_1_,
+2024-02-07 21:51:44         agreement0_.sheduler_job_id as shedule19_1_,
+2024-02-07 21:51:44         agreement0_.status as status20_1_,
+2024-02-07 21:51:44         agreement0_.supplementary_agreement_id as supplem21_1_,
+2024-02-07 21:51:44         agreement0_.validity_duration as validit22_1_ 
+2024-02-07 21:51:44     from
+2024-02-07 21:51:44         tpp_agreement agreement0_ 
+2024-02-07 21:51:44     where
+2024-02-07 21:51:44         agreement0_.product_id=?
+2024-02-07 21:51:44 2024-02-07 18:51:44.811  INFO 1 --- [nio-8080-exec-9] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:51:44     451504 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:51:44     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:51:44     764306 nanoseconds spent preparing 8 JDBC statements;
+2024-02-07 21:51:44     8412363 nanoseconds spent executing 8 JDBC statements;
+2024-02-07 21:51:44     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:51:44     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:51:44     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:51:44     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:51:44     281502 nanoseconds spent executing 1 flushes (flushing a total of 6 entities and 0 collections);
+2024-02-07 21:51:44     1241410 nanoseconds spent executing 5 partial-flushes (flushing a total of 17 entities and 17 collections)
+2024-02-07 21:51:44 }
+2024-02-07 21:52:27 Hibernate: 
+2024-02-07 21:52:27     select
+2024-02-07 21:52:27         product0_.id as id1_2_,
+2024-02-07 21:52:27         product0_.agreement_id as agreemen2_2_,
+2024-02-07 21:52:27         product0_.client_id as client_i3_2_,
+2024-02-07 21:52:27         product0_.date_of_conclusion as date_of_4_2_,
+2024-02-07 21:52:27         product0_.days as days5_2_,
+2024-02-07 21:52:27         product0_.end_date_time as end_date6_2_,
+2024-02-07 21:52:27         product0_.interest_rate_type as interest7_2_,
+2024-02-07 21:52:27         product0_.nso as nso8_2_,
+2024-02-07 21:52:27         product0_.number as number9_2_,
+2024-02-07 21:52:27         product0_.priority as priorit10_2_,
+2024-02-07 21:52:27         product0_.product_code as product11_2_,
+2024-02-07 21:52:27         product0_.reason_close as reason_12_2_,
+2024-02-07 21:52:27         product0_.requlsite_type as requlsi13_2_,
+2024-02-07 21:52:27         product0_.start_date_time as start_d14_2_,
+2024-02-07 21:52:27         product0_.state as state15_2_,
+2024-02-07 21:52:27         product0_.tax_rate as tax_rat16_2_,
+2024-02-07 21:52:27         product0_.threshold_amount as thresho17_2_,
+2024-02-07 21:52:27         product0_.type as type18_2_ 
+2024-02-07 21:52:27     from
+2024-02-07 21:52:27         tpp_product product0_ 
+2024-02-07 21:52:27     where
+2024-02-07 21:52:27         product0_.number=?
+2024-02-07 21:52:27 2024-02-07 18:52:27.663  INFO 1 --- [io-8080-exec-10] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:52:27     352600 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:52:27     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:52:27     103100 nanoseconds spent preparing 1 JDBC statements;
+2024-02-07 21:52:27     518299 nanoseconds spent executing 1 JDBC statements;
+2024-02-07 21:52:27     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:52:27     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:52:27     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:52:27     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:52:27     186699 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+2024-02-07 21:52:27     4300 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:52:27 }
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         product0_.id as id1_2_0_,
+2024-02-07 21:53:49         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 21:53:49         product0_.client_id as client_i3_2_0_,
+2024-02-07 21:53:49         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 21:53:49         product0_.days as days5_2_0_,
+2024-02-07 21:53:49         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 21:53:49         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 21:53:49         product0_.nso as nso8_2_0_,
+2024-02-07 21:53:49         product0_.number as number9_2_0_,
+2024-02-07 21:53:49         product0_.priority as priorit10_2_0_,
+2024-02-07 21:53:49         product0_.product_code as product11_2_0_,
+2024-02-07 21:53:49         product0_.reason_close as reason_12_2_0_,
+2024-02-07 21:53:49         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 21:53:49         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 21:53:49         product0_.state as state15_2_0_,
+2024-02-07 21:53:49         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 21:53:49         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 21:53:49         product0_.type as type18_2_0_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_product product0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         product0_.id=?
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         agreement0_.id as id1_1_,
+2024-02-07 21:53:49         agreement0_.arrangement_type as arrangem2_1_,
+2024-02-07 21:53:49         agreement0_.cancel_date as cancel_d3_1_,
+2024-02-07 21:53:49         agreement0_.cancellation_reason as cancella4_1_,
+2024-02-07 21:53:49         agreement0_.closing_date as closing_5_1_,
+2024-02-07 21:53:49         agreement0_.coefficient as coeffici6_1_,
+2024-02-07 21:53:49         agreement0_.coefficient_action as coeffici7_1_,
+2024-02-07 21:53:49         agreement0_.general_agreement_id as general_8_1_,
+2024-02-07 21:53:49         agreement0_.interest_calculation_date as interest9_1_,
+2024-02-07 21:53:49         agreement0_.interest_rate as interes10_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate as maxima_11_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate_coefficient as maxima_12_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate_coefficient_action as maxima_13_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate as minimum14_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate_coefficient as minimum15_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate_coefficient_action as minimum16_1_,
+2024-02-07 21:53:49         agreement0_.number as number17_1_,
+2024-02-07 21:53:49         agreement0_.opening_date as opening18_1_,
+2024-02-07 21:53:49         agreement0_.product_id as product23_1_,
+2024-02-07 21:53:49         agreement0_.sheduler_job_id as shedule19_1_,
+2024-02-07 21:53:49         agreement0_.status as status20_1_,
+2024-02-07 21:53:49         agreement0_.supplementary_agreement_id as supplem21_1_,
+2024-02-07 21:53:49         agreement0_.validity_duration as validit22_1_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_agreement agreement0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         agreement0_.product_id=? 
+2024-02-07 21:53:49         and agreement0_.number=?
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         tpprefprod0_.internal_id as internal1_6_,
+2024-02-07 21:53:49         tpprefprod0_.account_type_code as account_2_6_,
+2024-02-07 21:53:49         tpprefprod0_.product_class_code as product_3_6_,
+2024-02-07 21:53:49         tpprefprod0_.register_type_name as register4_6_,
+2024-02-07 21:53:49         tpprefprod0_.value as value5_6_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_ref_product_register_type tpprefprod0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         tpprefprod0_.product_class_code=? 
+2024-02-07 21:53:49         and tpprefprod0_.account_type_code=?
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         accountpoo0_.id as id1_0_,
+2024-02-07 21:53:49         accountpoo0_.account as account2_0_,
+2024-02-07 21:53:49         accountpoo0_.branch_code as branch_c3_0_,
+2024-02-07 21:53:49         accountpoo0_.currency_code as currency4_0_,
+2024-02-07 21:53:49         accountpoo0_.mdm_code as mdm_code5_0_,
+2024-02-07 21:53:49         accountpoo0_.priority_code as priority6_0_,
+2024-02-07 21:53:49         accountpoo0_.registry_type_code as registry7_0_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_account_pool accountpoo0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         accountpoo0_.branch_code=? 
+2024-02-07 21:53:49         and accountpoo0_.currency_code=? 
+2024-02-07 21:53:49         and accountpoo0_.mdm_code=? 
+2024-02-07 21:53:49         and accountpoo0_.priority_code=? 
+2024-02-07 21:53:49         and accountpoo0_.registry_type_code=? limit ?
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     insert 
+2024-02-07 21:53:49     into
+2024-02-07 21:53:49         tpp_product_register
+2024-02-07 21:53:49         (account_number, currency_code, product_id, state, type) 
+2024-02-07 21:53:49     values
+2024-02-07 21:53:49         (?, ?, ?, ?, ?)
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         productreg0_.id as id1_3_,
+2024-02-07 21:53:49         productreg0_.account_number as account_2_3_,
+2024-02-07 21:53:49         productreg0_.currency_code as currency3_3_,
+2024-02-07 21:53:49         productreg0_.product_id as product_5_3_,
+2024-02-07 21:53:49         productreg0_.state as state4_3_,
+2024-02-07 21:53:49         productreg0_.type as type6_3_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_product_register productreg0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         productreg0_.product_id=?
+2024-02-07 21:53:49 Hibernate: 
+2024-02-07 21:53:49     select
+2024-02-07 21:53:49         agreement0_.id as id1_1_,
+2024-02-07 21:53:49         agreement0_.arrangement_type as arrangem2_1_,
+2024-02-07 21:53:49         agreement0_.cancel_date as cancel_d3_1_,
+2024-02-07 21:53:49         agreement0_.cancellation_reason as cancella4_1_,
+2024-02-07 21:53:49         agreement0_.closing_date as closing_5_1_,
+2024-02-07 21:53:49         agreement0_.coefficient as coeffici6_1_,
+2024-02-07 21:53:49         agreement0_.coefficient_action as coeffici7_1_,
+2024-02-07 21:53:49         agreement0_.general_agreement_id as general_8_1_,
+2024-02-07 21:53:49         agreement0_.interest_calculation_date as interest9_1_,
+2024-02-07 21:53:49         agreement0_.interest_rate as interes10_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate as maxima_11_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate_coefficient as maxima_12_1_,
+2024-02-07 21:53:49         agreement0_.maxima_interest_rate_coefficient_action as maxima_13_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate as minimum14_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate_coefficient as minimum15_1_,
+2024-02-07 21:53:49         agreement0_.minimum_interest_rate_coefficient_action as minimum16_1_,
+2024-02-07 21:53:49         agreement0_.number as number17_1_,
+2024-02-07 21:53:49         agreement0_.opening_date as opening18_1_,
+2024-02-07 21:53:49         agreement0_.product_id as product23_1_,
+2024-02-07 21:53:49         agreement0_.sheduler_job_id as shedule19_1_,
+2024-02-07 21:53:49         agreement0_.status as status20_1_,
+2024-02-07 21:53:49         agreement0_.supplementary_agreement_id as supplem21_1_,
+2024-02-07 21:53:49         agreement0_.validity_duration as validit22_1_ 
+2024-02-07 21:53:49     from
+2024-02-07 21:53:49         tpp_agreement agreement0_ 
+2024-02-07 21:53:49     where
+2024-02-07 21:53:49         agreement0_.product_id=?
+2024-02-07 21:53:49 2024-02-07 18:53:49.379  INFO 1 --- [nio-8080-exec-1] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:53:49     383602 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:53:49     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:53:49     260902 nanoseconds spent preparing 7 JDBC statements;
+2024-02-07 21:53:49     3497218 nanoseconds spent executing 7 JDBC statements;
+2024-02-07 21:53:49     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:53:49     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:53:49     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:53:49     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:53:49     396402 nanoseconds spent executing 1 flushes (flushing a total of 7 entities and 0 collections);
+2024-02-07 21:53:49     1220704 nanoseconds spent executing 5 partial-flushes (flushing a total of 18 entities and 18 collections)
+2024-02-07 21:53:49 }
+2024-02-07 21:54:42 Hibernate: 
+2024-02-07 21:54:42     select
+2024-02-07 21:54:42         product0_.id as id1_2_0_,
+2024-02-07 21:54:42         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 21:54:42         product0_.client_id as client_i3_2_0_,
+2024-02-07 21:54:42         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 21:54:42         product0_.days as days5_2_0_,
+2024-02-07 21:54:42         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 21:54:42         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 21:54:42         product0_.nso as nso8_2_0_,
+2024-02-07 21:54:42         product0_.number as number9_2_0_,
+2024-02-07 21:54:42         product0_.priority as priorit10_2_0_,
+2024-02-07 21:54:42         product0_.product_code as product11_2_0_,
+2024-02-07 21:54:42         product0_.reason_close as reason_12_2_0_,
+2024-02-07 21:54:42         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 21:54:42         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 21:54:42         product0_.state as state15_2_0_,
+2024-02-07 21:54:42         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 21:54:42         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 21:54:42         product0_.type as type18_2_0_ 
+2024-02-07 21:54:42     from
+2024-02-07 21:54:42         tpp_product product0_ 
+2024-02-07 21:54:42     where
+2024-02-07 21:54:42         product0_.id=?
+2024-02-07 21:54:42 Hibernate: 
+2024-02-07 21:54:42     select
+2024-02-07 21:54:42         tpprefprod0_.internal_id as internal1_6_,
+2024-02-07 21:54:42         tpprefprod0_.account_type_code as account_2_6_,
+2024-02-07 21:54:42         tpprefprod0_.product_class_code as product_3_6_,
+2024-02-07 21:54:42         tpprefprod0_.register_type_name as register4_6_,
+2024-02-07 21:54:42         tpprefprod0_.value as value5_6_ 
+2024-02-07 21:54:42     from
+2024-02-07 21:54:42         tpp_ref_product_register_type tpprefprod0_ 
+2024-02-07 21:54:42     where
+2024-02-07 21:54:42         tpprefprod0_.product_class_code=? 
+2024-02-07 21:54:42         and tpprefprod0_.value=?
+2024-02-07 21:54:42 Hibernate: 
+2024-02-07 21:54:42     select
+2024-02-07 21:54:42         productreg0_.id as id1_3_,
+2024-02-07 21:54:42         productreg0_.account_number as account_2_3_,
+2024-02-07 21:54:42         productreg0_.currency_code as currency3_3_,
+2024-02-07 21:54:42         productreg0_.product_id as product_5_3_,
+2024-02-07 21:54:42         productreg0_.state as state4_3_,
+2024-02-07 21:54:42         productreg0_.type as type6_3_ 
+2024-02-07 21:54:42     from
+2024-02-07 21:54:42         tpp_product_register productreg0_ 
+2024-02-07 21:54:42     where
+2024-02-07 21:54:42         productreg0_.product_id=? 
+2024-02-07 21:54:42         and productreg0_.type=?
+2024-02-07 21:54:42 2024-02-07 18:54:42.605  INFO 1 --- [nio-8080-exec-2] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:54:42     374702 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:54:42     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:54:42     170602 nanoseconds spent preparing 3 JDBC statements;
+2024-02-07 21:54:42     1701704 nanoseconds spent executing 3 JDBC statements;
+2024-02-07 21:54:42     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:54:42     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:54:42     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:54:42     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:54:42     185900 nanoseconds spent executing 1 flushes (flushing a total of 5 entities and 0 collections);
+2024-02-07 21:54:42     283101 nanoseconds spent executing 2 partial-flushes (flushing a total of 3 entities and 3 collections)
+2024-02-07 21:54:42 }
+2024-02-07 21:54:55 Hibernate: 
+2024-02-07 21:54:55     select
+2024-02-07 21:54:55         product0_.id as id1_2_0_,
+2024-02-07 21:54:55         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 21:54:55         product0_.client_id as client_i3_2_0_,
+2024-02-07 21:54:55         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 21:54:55         product0_.days as days5_2_0_,
+2024-02-07 21:54:55         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 21:54:55         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 21:54:55         product0_.nso as nso8_2_0_,
+2024-02-07 21:54:55         product0_.number as number9_2_0_,
+2024-02-07 21:54:55         product0_.priority as priorit10_2_0_,
+2024-02-07 21:54:55         product0_.product_code as product11_2_0_,
+2024-02-07 21:54:55         product0_.reason_close as reason_12_2_0_,
+2024-02-07 21:54:55         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 21:54:55         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 21:54:55         product0_.state as state15_2_0_,
+2024-02-07 21:54:55         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 21:54:55         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 21:54:55         product0_.type as type18_2_0_ 
+2024-02-07 21:54:55     from
+2024-02-07 21:54:55         tpp_product product0_ 
+2024-02-07 21:54:55     where
+2024-02-07 21:54:55         product0_.id=?
+2024-02-07 21:54:55 2024-02-07 18:54:55.127  INFO 1 --- [nio-8080-exec-3] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:54:55     400401 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:54:55     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:54:55     70600 nanoseconds spent preparing 1 JDBC statements;
+2024-02-07 21:54:55     512301 nanoseconds spent executing 1 JDBC statements;
+2024-02-07 21:54:55     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:54:55     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:54:55     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:54:55     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:54:55     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:54:55     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:54:55 }
+2024-02-07 21:54:56 Hibernate: 
+2024-02-07 21:54:56     select
+2024-02-07 21:54:56         product0_.id as id1_2_0_,
+2024-02-07 21:54:56         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 21:54:56         product0_.client_id as client_i3_2_0_,
+2024-02-07 21:54:56         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 21:54:56         product0_.days as days5_2_0_,
+2024-02-07 21:54:56         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 21:54:56         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 21:54:56         product0_.nso as nso8_2_0_,
+2024-02-07 21:54:56         product0_.number as number9_2_0_,
+2024-02-07 21:54:56         product0_.priority as priorit10_2_0_,
+2024-02-07 21:54:56         product0_.product_code as product11_2_0_,
+2024-02-07 21:54:56         product0_.reason_close as reason_12_2_0_,
+2024-02-07 21:54:56         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 21:54:56         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 21:54:56         product0_.state as state15_2_0_,
+2024-02-07 21:54:56         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 21:54:56         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 21:54:56         product0_.type as type18_2_0_ 
+2024-02-07 21:54:56     from
+2024-02-07 21:54:56         tpp_product product0_ 
+2024-02-07 21:54:56     where
+2024-02-07 21:54:56         product0_.id=?
+2024-02-07 21:54:56 2024-02-07 18:54:56.241  INFO 1 --- [nio-8080-exec-4] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 21:54:56     348399 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 21:54:56     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 21:54:56     26900 nanoseconds spent preparing 1 JDBC statements;
+2024-02-07 21:54:56     543599 nanoseconds spent executing 1 JDBC statements;
+2024-02-07 21:54:56     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 21:54:56     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 21:54:56     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 21:54:56     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 21:54:56     0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+2024-02-07 21:54:56     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+2024-02-07 21:54:56 }
+2024-02-07 22:00:09 Hibernate: 
+2024-02-07 22:00:09     select
+2024-02-07 22:00:09         product0_.id as id1_2_0_,
+2024-02-07 22:00:09         product0_.agreement_id as agreemen2_2_0_,
+2024-02-07 22:00:09         product0_.client_id as client_i3_2_0_,
+2024-02-07 22:00:09         product0_.date_of_conclusion as date_of_4_2_0_,
+2024-02-07 22:00:09         product0_.days as days5_2_0_,
+2024-02-07 22:00:09         product0_.end_date_time as end_date6_2_0_,
+2024-02-07 22:00:09         product0_.interest_rate_type as interest7_2_0_,
+2024-02-07 22:00:09         product0_.nso as nso8_2_0_,
+2024-02-07 22:00:09         product0_.number as number9_2_0_,
+2024-02-07 22:00:09         product0_.priority as priorit10_2_0_,
+2024-02-07 22:00:09         product0_.product_code as product11_2_0_,
+2024-02-07 22:00:09         product0_.reason_close as reason_12_2_0_,
+2024-02-07 22:00:09         product0_.requlsite_type as requlsi13_2_0_,
+2024-02-07 22:00:09         product0_.start_date_time as start_d14_2_0_,
+2024-02-07 22:00:09         product0_.state as state15_2_0_,
+2024-02-07 22:00:09         product0_.tax_rate as tax_rat16_2_0_,
+2024-02-07 22:00:09         product0_.threshold_amount as thresho17_2_0_,
+2024-02-07 22:00:09         product0_.type as type18_2_0_ 
+2024-02-07 22:00:09     from
+2024-02-07 22:00:09         tpp_product product0_ 
+2024-02-07 22:00:09     where
+2024-02-07 22:00:09         product0_.id=?
+2024-02-07 22:00:09 Hibernate: 
+2024-02-07 22:00:09     select
+2024-02-07 22:00:09         tpprefprod0_.internal_id as internal1_6_,
+2024-02-07 22:00:09         tpprefprod0_.account_type_code as account_2_6_,
+2024-02-07 22:00:09         tpprefprod0_.product_class_code as product_3_6_,
+2024-02-07 22:00:09         tpprefprod0_.register_type_name as register4_6_,
+2024-02-07 22:00:09         tpprefprod0_.value as value5_6_ 
+2024-02-07 22:00:09     from
+2024-02-07 22:00:09         tpp_ref_product_register_type tpprefprod0_ 
+2024-02-07 22:00:09     where
+2024-02-07 22:00:09         tpprefprod0_.product_class_code=? 
+2024-02-07 22:00:09         and tpprefprod0_.value=?
+2024-02-07 22:00:09 Hibernate: 
+2024-02-07 22:00:09     select
+2024-02-07 22:00:09         productreg0_.id as id1_3_,
+2024-02-07 22:00:09         productreg0_.account_number as account_2_3_,
+2024-02-07 22:00:09         productreg0_.currency_code as currency3_3_,
+2024-02-07 22:00:09         productreg0_.product_id as product_5_3_,
+2024-02-07 22:00:09         productreg0_.state as state4_3_,
+2024-02-07 22:00:09         productreg0_.type as type6_3_ 
+2024-02-07 22:00:09     from
+2024-02-07 22:00:09         tpp_product_register productreg0_ 
+2024-02-07 22:00:09     where
+2024-02-07 22:00:09         productreg0_.product_id=? 
+2024-02-07 22:00:09         and productreg0_.type=?
+2024-02-07 22:00:09 2024-02-07 19:00:09.950  INFO 1 --- [nio-8080-exec-5] i.StatisticalLoggingSessionEventListener : Session Metrics {
+2024-02-07 22:00:09     363905 nanoseconds spent acquiring 1 JDBC connections;
+2024-02-07 22:00:09     0 nanoseconds spent releasing 0 JDBC connections;
+2024-02-07 22:00:09     84601 nanoseconds spent preparing 3 JDBC statements;
+2024-02-07 22:00:09     1462523 nanoseconds spent executing 3 JDBC statements;
+2024-02-07 22:00:09     0 nanoseconds spent executing 0 JDBC batches;
+2024-02-07 22:00:09     0 nanoseconds spent performing 0 L2C puts;
+2024-02-07 22:00:09     0 nanoseconds spent performing 0 L2C hits;
+2024-02-07 22:00:09     0 nanoseconds spent performing 0 L2C misses;
+2024-02-07 22:00:09     214503 nanoseconds spent executing 1 flushes (flushing a total of 5 entities and 0 collections);
+2024-02-07 22:00:09     226703 nanoseconds spent executing 2 partial-flushes (flushing a total of 3 entities and 3 collections)
+2024-02-07 22:00:09 }

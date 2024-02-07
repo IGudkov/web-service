@@ -1,0 +1,57 @@
+2024-02-07 21:19:20 The files belonging to this database system will be owned by user "postgres".
+2024-02-07 21:19:20 This user must also own the server process.
+2024-02-07 21:19:20 
+2024-02-07 21:19:20 The database cluster will be initialized with locale "en_US.utf8".
+2024-02-07 21:19:20 The default database encoding has accordingly been set to "UTF8".
+2024-02-07 21:19:20 The default text search configuration will be set to "english".
+2024-02-07 21:19:20 
+2024-02-07 21:19:20 Data page checksums are disabled.
+2024-02-07 21:19:20 
+2024-02-07 21:19:20 fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2024-02-07 21:19:20 creating subdirectories ... ok
+2024-02-07 21:19:20 selecting dynamic shared memory implementation ... posix
+2024-02-07 21:19:20 selecting default max_connections ... 100
+2024-02-07 21:19:20 selecting default shared_buffers ... 128MB
+2024-02-07 21:19:21 selecting default time zone ... UTC
+2024-02-07 21:19:21 creating configuration files ... ok
+2024-02-07 21:19:21 running bootstrap script ... ok
+2024-02-07 21:19:21 performing post-bootstrap initialization ... ok
+2024-02-07 21:19:22 syncing data to disk ... ok
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 Success. You can now start the database server using:
+2024-02-07 21:19:22 
+2024-02-07 21:19:22     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 waiting for server to start....2024-02-07 18:19:22.063 UTC [36] LOG:  starting PostgreSQL 14.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, 64-bit
+2024-02-07 21:19:22 2024-02-07 18:19:22.066 UTC [36] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-07 21:19:22 2024-02-07 18:19:22.075 UTC [37] LOG:  database system was shut down at 2024-02-07 18:19:21 UTC
+2024-02-07 21:19:22 2024-02-07 18:19:22.079 UTC [36] LOG:  database system is ready to accept connections
+2024-02-07 21:19:22  done
+2024-02-07 21:19:22 server started
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 2024-02-07 18:19:22.158 UTC [36] LOG:  received fast shutdown request
+2024-02-07 21:19:22 waiting for server to shut down....2024-02-07 18:19:22.161 UTC [36] LOG:  aborting any active transactions
+2024-02-07 21:19:22 2024-02-07 18:19:22.164 UTC [36] LOG:  background worker "logical replication launcher" (PID 43) exited with exit code 1
+2024-02-07 21:19:22 2024-02-07 18:19:22.164 UTC [38] LOG:  shutting down
+2024-02-07 21:19:22 2024-02-07 18:19:22.191 UTC [36] LOG:  database system is shut down
+2024-02-07 21:19:22  done
+2024-02-07 21:19:22 server stopped
+2024-02-07 21:19:22 
+2024-02-07 21:19:22 PostgreSQL init process complete; ready for start up.
+2024-02-07 21:19:22 
+2024-02-07 21:19:21 sh: locale: not found
+2024-02-07 21:19:21 2024-02-07 18:19:21.418 UTC [30] WARNING:  no usable system locales were found
+2024-02-07 21:19:22 initdb: warning: enabling "trust" authentication for local connections
+2024-02-07 21:19:22 You can change this by editing pg_hba.conf or using the option -A, or
+2024-02-07 21:19:22 --auth-local and --auth-host, the next time you run initdb.
+2024-02-07 21:19:22 2024-02-07 18:19:22.280 UTC [1] LOG:  starting PostgreSQL 14.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, 64-bit
+2024-02-07 21:19:22 2024-02-07 18:19:22.281 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-02-07 21:19:22 2024-02-07 18:19:22.281 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2024-02-07 21:19:22 2024-02-07 18:19:22.286 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-02-07 21:19:22 2024-02-07 18:19:22.294 UTC [49] LOG:  database system was shut down at 2024-02-07 18:19:22 UTC
+2024-02-07 21:19:22 2024-02-07 18:19:22.299 UTC [1] LOG:  database system is ready to accept connections
+2024-02-07 21:19:24 2024-02-07 18:19:24.467 UTC [56] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2024-02-07 21:19:24 2024-02-07 18:19:24.467 UTC [56] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock

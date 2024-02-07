@@ -1,0 +1,14 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      changelog/dbchangelog-4.7.xsd">
+
+    <include file="db.001-create-tpp_ref_account_type-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.002-create-tpp_ref_product_class-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.003-create-tpp_ref_product_register_type-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.004-create-tpp_product-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.006-create-tpp_account_pool-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.005-create-tpp_agreement-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.007-create-tpp_product_register-table.xml" relativeToChangelogFile="true"/>
+    <include file="db.008-insert-table.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
